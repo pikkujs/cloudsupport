@@ -1,6 +1,7 @@
 {
   "name": "cloudsupport",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Which packages run on which clouds, as reviewable data",
   "scripts": {
