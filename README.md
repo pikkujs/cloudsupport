@@ -17,7 +17,9 @@ Workers), a serverless function, or only on a server.
 
 Edge support implies serverless support, which implies server.
 
-A package with no file is not assumed to work anywhere but a Node server.
+A package with no file is not vouched for. Pikku's verifier judges it by what
+its bundle actually imports (for example a Node built-in in an edge unit), so an
+unlisted package is checked, not assumed to work.
 
 ## A file
 
@@ -57,6 +59,10 @@ Open a pull request that adds or changes a file under `packages/`. CI runs:
 - `npm test`: the validator's own tests.
 
 To run it locally: `npm ci && npm run validate && npm test`.
+
+`npm run build` compiles every file into `dist/cloudsupport.json` (and refuses
+to build invalid data). That one file is what tools read, so they need no YAML
+parser.
 
 Claims should come from somewhere checkable: a bundle under the target's
 profile, the platform's documentation, or an issue. Say which in `reason` or

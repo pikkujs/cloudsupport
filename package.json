@@ -5,6 +5,7 @@
   "description": "Which packages run on which clouds, as reviewable data",
   "scripts": {
     "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
     "test": "node --test \"scripts/*.test.mjs\""
   },
   "engines": {

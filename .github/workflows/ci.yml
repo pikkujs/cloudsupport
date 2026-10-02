@@ -22,5 +22,7 @@ jobs:
       - run: npm ci
       - name: Validate every packages/**/*.yaml
         run: npm run validate
-      - name: Test the validator
+      - name: Test the validator and the build
         run: npm test
+      - name: Build the data file
+        run: npm run build

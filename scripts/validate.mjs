@@ -153,6 +153,11 @@ function listYaml(dir) {
   return out
 }
 
+/** Repo-relative paths (`packages/@pikku/core.yaml`) of every file under `root/packages`. */
+export function listPackageFiles(root) {
+  return listYaml(join(root, 'packages')).map((abs) => relative(root, abs).split(sep).join('/'))
+}
+
 /** Validate every file under `root/packages`. Returns { files, errors }. */
 export function validateTree(root) {
   const errors = []
