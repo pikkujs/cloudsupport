@@ -1,0 +1,9 @@
+package: "@pikku/better-auth"
+entries:
+  - versions: "*"
+    cloud:
+      edge: false
+      serverless: true
+    reason: better-auth statically imports @better-auth/utils/password, whose workerd condition resolves
+      to password.node.mjs (node:crypto scrypt).
+    source: pikkujs/pikku#1962

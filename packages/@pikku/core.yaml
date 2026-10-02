@@ -1,0 +1,52 @@
+package: "@pikku/core"
+entries:
+  - versions: "*"
+    cloud:
+      edge:
+        - cloudflare-workers
+      serverless: true
+    exports:
+      ./services/local-meta:
+        cloud:
+          edge: false
+          serverless: false
+      ./services/v8-coverage:
+        cloud:
+          edge: false
+          serverless: false
+      ./services/istanbul-coverage:
+        cloud:
+          edge: false
+          serverless: false
+      ./services/local-content:
+        cloud:
+          edge: false
+          serverless: false
+      ./services/local-content-request-handler:
+        cloud:
+          edge: false
+          serverless: false
+      ./services/temporary-file-service:
+        cloud:
+          edge: false
+          serverless: false
+      ./services/file-scenario-run-store:
+        cloud:
+          edge: false
+          serverless: false
+      ./node-host-resolver:
+        cloud:
+          edge: false
+          serverless: false
+      ./testing:
+        cloud:
+          edge: false
+          serverless: false
+      ./dev:
+        cloud:
+          edge: false
+          serverless: false
+    reason: These subpaths use the filesystem, coverage tooling or the host resolver, so they are
+      Node-only. Carried over from the declaration in pikkujs/pikku#1962 (pikku-edge); not
+      re-audited since.
+    source: pikkujs/pikku#1962

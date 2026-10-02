@@ -1,0 +1,9 @@
+package: "@pikku/aws-services"
+entries:
+  - versions: "*"
+    cloud:
+      edge: false
+      serverless: false
+    reason: AWS SDK clients and Node streams. Carried over from the declaration in pikkujs/pikku#1962
+      (pikku-edge); not re-audited since.
+    source: pikkujs/pikku#1962

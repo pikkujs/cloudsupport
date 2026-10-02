@@ -1,0 +1,8 @@
+package: "@pikku/browser"
+entries:
+  - versions: "*"
+    cloud:
+      edge: false
+      serverless: false
+    reason: Drives a local browser process through puppeteer-core.
+    source: pikkujs/pikku#1962

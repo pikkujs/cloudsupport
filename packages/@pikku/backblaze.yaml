@@ -1,0 +1,9 @@
+package: "@pikku/backblaze"
+entries:
+  - versions: "*"
+    cloud:
+      edge: false
+      serverless: true
+    reason: Uses node:crypto, which the edge runtime does not provide; it is available under serverless
+      nodejs_compat.
+    source: pikkujs/pikku#1962

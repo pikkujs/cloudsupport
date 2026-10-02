@@ -1,0 +1,8 @@
+package: "@pikku/pino"
+entries:
+  - versions: "*"
+    cloud:
+      edge:
+        - cloudflare-workers
+      serverless: true
+    source: pikkujs/pikku#1962

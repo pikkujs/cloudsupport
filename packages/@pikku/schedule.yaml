@@ -1,0 +1,8 @@
+package: "@pikku/schedule"
+entries:
+  - versions: "*"
+    cloud:
+      edge: false
+      serverless: false
+    reason: Schedules in-process with the `cron` package, which needs a long-lived process.
+    source: pikkujs/pikku#1962

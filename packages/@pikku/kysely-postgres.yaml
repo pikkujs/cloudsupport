@@ -1,0 +1,8 @@
+package: "@pikku/kysely-postgres"
+entries:
+  - versions: "*"
+    cloud:
+      edge: false
+      serverless: true
+    reason: Carried over from the declaration in pikkujs/pikku#1962 (pikku-edge); not re-audited since.
+    source: pikkujs/pikku#1962

@@ -1,0 +1,18 @@
+{
+  "name": "cloudsupport",
+  "private": true,
+  "type": "module",
+  "description": "Which packages run on which clouds, as reviewable data",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test \"scripts/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "semver": "^7.8.5",
+    "yaml": "^2.9.1"
+  }
+}

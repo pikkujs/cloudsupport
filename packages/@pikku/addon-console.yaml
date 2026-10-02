@@ -1,0 +1,9 @@
+package: "@pikku/addon-console"
+entries:
+  - versions: "*"
+    cloud:
+      edge: false
+      serverless: false
+    reason: "Reads and writes the local disk (node:fs, node:path, node:os): the meta, state-diff and
+      code-edit services."
+    source: pikkujs/pikku#1962
